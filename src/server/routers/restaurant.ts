@@ -54,13 +54,13 @@ export const restaurantRouter = createRouter().mutation("create", {
         message: "Couldn't make a restaurant",
       });
 
-    // sendEmail({
-    //   email: input.ownerEmail,
-    //   name: input.ownerName,
-    //   subject: EmailSubjects.Register,
-    //   restaurantName: input.restaurantName,
-    //   htmlTemplate: RegisterHtmlTemplate(input.ownerName, input.restaurantName),
-    // });
+    sendEmail({
+      email: input.ownerEmail,
+      name: input.ownerName,
+      subject: EmailSubjects.Register,
+      restaurantName: input.restaurantName,
+      htmlTemplate: RegisterHtmlTemplate(input.ownerName, input.restaurantName),
+    });
 
     return {
       message: "Account created successfully",
